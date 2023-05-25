@@ -1,0 +1,19 @@
+﻿@model Todo
+
+<h2><b>Add Todo Item</b></h2>
+
+<form  asp-action="Create">
+    <div class="form-group">
+        <label asp-for="Description">Description</label>
+        <input asp-for="Description"  class="form-control" />
+    </div>
+
+    <div class="form-check">
+        <input asp-for="IsCompleted" type="checkbox" class="form-check-input"/>
+        <label class="form-check-label" asp-for="IsCompleted">IsCompleted?</label>
+    </div>
+
+    <button type="submit" class="btn btn-primary">SAVE</button>
+    <a asp-action="Index">Back to List</a>
+</form>
+
